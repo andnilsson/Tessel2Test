@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button onclick="button(2)">Grön</button>
+<button onclick="button(3)">Blå</button>
+</body>
+
+
+<script>
+                 var button = function (ledIndex) {
+                     var req = new XMLHttpRequest();
+                     req.open('GET', '/leds/' + ledIndex);
+
+                     req.onload = function (e) {
+                         if (req.readyState == 4 && req.status == 200) {
+                             console.log("ok");
+                         } else {
+                             console.log('Error', e); // If something went wrong, log that event to the console.
+                         }
+                     }
+                     req.send();
+                 }
+</script>
+
+</html>
