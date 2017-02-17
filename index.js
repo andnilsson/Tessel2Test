@@ -17,6 +17,7 @@ tessel.network.ap.disable(function (error) {
   if (error) {
     // handle error if it exists
     console.log("error");
+    console.log("en liten ändring");
   }
 
   console.log("the access point has been successfully disabled");
